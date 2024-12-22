@@ -1,0 +1,155 @@
+.post-detail {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.post-header h1 {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  color: #5f9b65;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-content {
+  line-height: 1.8;
+  font-size: 1.1em;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.post-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.floating-buttons {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  z-index: 999;
+}
+
+/* 统一两个按钮的基础样式 */
+.home-button,
+.back-to-top {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.home-button:hover,
+.back-to-top:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.home-button svg,
+.back-to-top svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.home-button:hover svg {
+  transform: scale(1.1);
+}
+
+.back-to-top:hover svg {
+  transform: translateY(-2px);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .floating-buttons {
+    right: 20px;
+    bottom: 20px;
+    gap: 12px;
+  }
+
+  .home-button,
+  .back-to-top {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .home-button svg,
+  .back-to-top svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2em;
+  color: #666;
+}
+
+.error-container {
+  text-align: center;
+  padding: 40px;
+  color: #e74c3c;
+}
+
+.error-container h2 {
+  margin-bottom: 20px;
+}
+
+/* 适配深色模式
+.dark-mode .post-detail {
+  background: rgba(45, 45, 45, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode   .post-header h1 {
+  color: var(--primary-color);
+}
+
+.dark-mode .post-content {
+  background-color: #e8eef2;
+  padding: 30px;
+  border-radius: 8px;
+} */
+ 
